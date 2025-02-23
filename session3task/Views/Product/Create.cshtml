@@ -1,0 +1,29 @@
+﻿@model session3task.Models.ProductCreateViewModel
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<h2>Create Product and Company</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" class="form-control" />
+        <span asp-validation-for="ProductName" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="CompanyName"></label>
+        <input asp-for="CompanyName" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
